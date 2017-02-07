@@ -14,7 +14,7 @@
 
         function SetJobTitle($job_title)
         {
-            $this->job_title = strrev($job_title);
+            $this->job_title = strtoupper($job_title);
         }
         function SetJobContact($job_contact)
         {

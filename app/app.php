@@ -46,9 +46,38 @@
             $description = $new_job->GetJobDescription();
 
             if ($title) {
-                return '<h1>' . $rev_title . '</h1><br><h2>' . $contact . '</h2><br><h3>' . $description . '</h3>';
+                return "
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' type='text/css'>
+                        <title>Job Board Output</title>
+                    </head>
+                    <body>
+                        <div class='container'>
+                            <h1>" . $rev_title . "</h1><br><h2>" . $contact . "</h2><br><h3>" . $description . "</h3>
+                            <h5><a href='/'>add another job listing</a></h5>
+                        </div>
+                    </body>
+                </html>
+                ";
             } else {
-                return '<h2>Please Enter a Job Title</h2>';
+                return "
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' type='text/css'>
+                        <title>Job Board Output</title>
+                    </head>
+                    <body>
+                        <div class='container'>
+                            <h2>Please Enter a Job Title</h2>
+                            <h5><a href='/'>back to form</a></h5>
+
+                        </div>
+                    </body>
+                </html>
+                ";
             }
 
 
